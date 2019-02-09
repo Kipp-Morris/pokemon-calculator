@@ -5,7 +5,7 @@ A four-operation calculator for the Nintendo GameBoy Advance written in C.
 
 In my Intro to Computer Systems and Organization class we did an assignment where we created a small GBA game and used it as a way to learn some of the basics of having to think about hardware while programming. It was also meant to help us become more used to programming in C, since GBA games are written in either C or C++. Since that assignment was small in terms of the amount of time we spent on it and I honestly did a lot of it without totally understanding how the underlying hardware of the GBA worked, this calculator project that I took on on my own was a way for me to practice C programming while also learning more about the GBA.
 
-To that end, I'll use this space to explain some of what I learned and how I would extend this project if I were to put more time into it.
+To that end, I'll use this space to explain some of what I learned about GBA graphics and how I would extend this project if I were to put more time into it.
 
 # Bitmap Graphics vs Tiled Graphics
 Seeing as games are all about displaying different things on the screen for players to interact with, learning about displaying graphics was the most important and time-consuming portion of the project. There are two main graphics display modes available for displaying backgrounds and sprites (small graphics used for characters, etc.) on the GBA: *bitmap graphics and tiled graphics*.
@@ -49,8 +49,6 @@ From there, actually displaying the graphics is a matter of setting certain bits
 
 # OAM (Object Attribute Memory)
 
-![alt text](https://github.com/Kipp-Morris/pokemon-calculator/blob/master/readme_images/oam_view.png)
-
 Object attribute memory is where information about sprites is stored. It is an array of struct obj_attrs, with each obj_attr essentially being a reference to a sprite. Each struct obj_attr contains three 16-bit attributes, which store a variety of information such as:
 
 * Whether or not the sprite is visible
@@ -59,4 +57,10 @@ Object attribute memory is where information about sprites is stored. It is an a
 * Whether or not the sprite is horizontally or vertically flip
 
 As long as these attributes are set appropriately, the hardware handles everything.
+
+![alt text](https://github.com/Kipp-Morris/pokemon-calculator/blob/master/readme_images/oam_view.png)
+
+The emulator's OAM viewer, shown above, was very useful while I was first trying to get the sprites to appear on the screen because it will show you what sprites' info is stored where.
+
+# Project Extensions
 
