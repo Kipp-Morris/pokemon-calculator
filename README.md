@@ -62,5 +62,20 @@ As long as these attributes are set appropriately, the hardware handles everythi
 
 The emulator's OAM viewer, shown above, was very useful while I was first trying to get the sprites to appear on the screen because it will show you what sprites' info is stored where.
 
-# Project Extensions
+# Project Extension
 
+![alt text](https://github.com/Kipp-Morris/pokemon-calculator/blob/master/readme_images/calculator_screen.png)
+
+The calculator as of right now doesn't handle negative numbers or decimal numbers. My main goal was to learn about the GBA graphics and just make something fun, but I decided that at least for right now, adding negative and decimal numbers is a time investment that wouldn't really add much to what I learned from the project. My main goal was to learn about the GBA graphics so I could spend less time learning them and potentially do a more complex GBA project later on. But it would be a more functional calculator with those additions (if someone were to actually use it for math?).
+
+Decimal numbers in particular would be interesting because it would require a technique called fixed-point arithmetic, which is essentially using integer variables to perform decimal number calculations. It isn't terribly complicated, and [tonc](https://www.coranac.com/tonc/text/toc.htm), the GBA library and guide I used, has functions that would do most of the work, but it still wouldn't teach me much about the GBA graphics. I read about it a little bit and thought it was very interesting though, so I may add it in sometime just to learn about it.
+
+# Libraries and Tools I Used
+
+[devkitPro](https://github.com/devkitPro), a compiler toolchain for GBA and DS development
+
+[tonc](https://www.coranac.com/tonc/text/toc.htm), a "textbook" of sorts that does a great job of explaining GBA programming
+
+[tonclib](http://www.coranac.com/projects/tonc/), a library for GBA devlopment made by the writer of tonc; I used version 1.3 because I found I had some issues with displaying text using the newest version
+
+[nin10kit](https://github.com/TricksterGuy/nin10kit), a graphics and sound conversion tool for homebrew game devlopment
